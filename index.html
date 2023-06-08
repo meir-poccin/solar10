@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    
+  <link rel="stylesheet" href="testing.css">
+  
+ 
+</head>
+<body>
+  
+  
+
+ 
+
+
+  
+  <div class="modal-bg">
+
+    <div class="modal">
+      <h3 style="color:#2980b9">ENTER YOUR INFORMATION AND GET AN ESTIMATE</h3>
+      <input class='bill' type="text" placeholder="MONTHLY BILL" name="bill">
+      <input class='cost' type="text" placeholder="COST PER KWH" name="cost">
+     
+<div class="radio">
+
+<div class="button one">
+  <input type="radio" id="a25" name="check-substitution-2" value="commercial" checked/>
+  <label class="btn btn-default" for="a25">COMMERCIAL</label>
+</div>
+
+<div class="button">
+  <input type="radio" id="a50" name="check-substitution-2" value="residential"/>
+  <label class="btn btn-default" for="a50">RESIDENTIAL</label>
+</div>
+
+</div>
+
+
+
+
+      <button class="btn" onclick="submit()">SUBMIT</button>
+      <span class="close" onclick="clos()">X</span>
+    </div>
+  </div>
+
+  
+  <script>
+    
+  
+     
+  
+  function clos(){
+     
+     document.querySelector('.cost').value = ''
+     document.querySelector('.bill').value = ''
+     //localStorage.setItem('addres', '')
+     window.location.href = 'https://solar-powerhouse.com'
+  }
+  
+  function store(bill, cost ){
+    
+     localStorage.setItem('bill', bill)
+     
+     localStorage.setItem('cost', cost)
+     let status
+     if(document.getElementById('a25').checked){
+      status = 'commercial'
+  
+     }else{
+      status = 'res'
+     }
+     localStorage.setItem('stat',status)
+     console.log(status)
+     return false
+  }
+  
+  function submit(){
+    let bill = document.querySelector('.bill').value
+    
+   let bill2=''
+   for (let i = 0; i < bill.length ; i++ ){
+      if(bill[i]!='$' && bill[i]!=','){
+        bill2 += bill[i]
+      }
+      console.log(bill2)
+   }
+    let kwh = document.querySelector('.cost').value
+    let kwh2=''
+   for (let i = 0; i < kwh.length ; i++ ){
+      if(kwh[i]!='$' && kwh[i]!=','){
+        kwh2 += kwh[i]
+      }
+      console.log(kwh2)
+   }
+    
+    if(Number(bill2) <= 0 || (kwh && Number(kwh2) <=0 )){
+          alert('enter correct information')
+    }else{ 
+    
+     store(Number(bill2), Number(kwh2))
+     
+     document.querySelector('.cost').value = ''
+     document.querySelector('.bill').value = ''
+     document.getElementById('a25').checked = true
+     
+     window.location.href = 'estimate.html'
+    
+  }
+}
+    </script>
+
+
+
+  
+</body>
+</html>

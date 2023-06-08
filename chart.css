@@ -1,0 +1,181 @@
+  * {
+  box-sizing: border-box;
+}
+   body{
+ margin: 0; 
+  
+/*background-color: aqua;
+opacity: 0.8;*/
+
+   
+    font-family: 'Inter', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+/*color:#221033;*/
+  color: #ffdd80;
+   }
+   
+
+   .header{
+    font-size: 3rem;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*color: olivedrab;
+    background-color: antiquewhite;*/
+    color:#997000;
+    background-color: #ffdd80;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    position: sticky;
+    top: 0;
+  
+   }
+   
+   
+
+   .input{
+    height: 90vh;
+    display: none;
+   }
+    .chartBox{
+      
+      width: 500px;
+      height: 500px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      -webkit-box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+    }
+
+    .chartBox2, .chartBox3{
+      
+      max-width: 600px;
+      height: 600px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin-left: 50px;
+      -webkit-box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+box-shadow: 9px 0px 22px 14px rgba(0,0,0,0.75);
+    }
+
+
+  .container1{
+    display: flex;
+  }
+  .h{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+
+.side1{
+  padding-top: 200px;
+  padding-right: 100px;
+  margin-left: 50px;
+
+}
+
+.savings{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.input{
+  margin-top: 30px;
+}
+
+hr{
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 5px;
+
+}
+
+.a{
+  background-color:#ff5900 ;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+.main, .header{display: none;}
+
+input[type=text], button, .a{
+  display: flex;
+  width: 20%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  resize: vertical;
+ margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  color:#997000;
+  background-color:#ffdd80 ;
+  
+  text-align: center;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.heading1{
+  text-align: center;
+}
+
+.pdf,.pdf1, .design, .huge-header, .addr2 {
+  display: none;
+}
+.please-wait {
+  
+  font-size: 3rem;
+  color: #ffdd80;
+  font-weight:bold;
+  margin: 0;
+  
+  text-align: center;
+
+  padding-top: 200px;
+}
+.bottom-buttons{
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.huge-header{
+  font-size: 3.5rem;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+  .chartBox {
+    width: 90%;
+
+  }
+}

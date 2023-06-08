@@ -1,0 +1,155 @@
+.modal-bg{
+  position: fixed; 
+  
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  background-image: url('house.png');
+  background-repeat: no-repeat;
+  width:100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(60%);
+  
+  
+}
+
+
+
+.modal{
+    position: relative;
+    font-family: "Montserrat",sans-serif;
+    background-color: white;
+    width: 30%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.8;
+    
+    border:5px solid  #2980b9;
+    border-radius: 10px;
+    -webkit-box-shadow: -6px 6px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -6px 6px 13px 0px rgba(0,0,0,0.75);
+box-shadow: -6px 6px 13px 0px rgba(0,0,0,0.75);
+text-align: center;
+line-height: 2em;
+font-weight: bold;
+}
+.btn{
+    padding: 10px 30px;
+    background-color: #2980b9;
+    color: rgb(242, 227, 227);
+    border: none;
+    font-family:"Montserrat",sans-serif; 
+    cursor: pointer;
+    border-radius: 4px;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover{
+    opacity: 0.7;
+}
+
+input{
+    font-family: inherit;
+    background-color: rgb(234, 219, 219);
+    height: 40px;
+    /*padding-right: 30px;
+    padding-left: 30px;*/
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    font-size: 120%;
+    
+    text-align: center;
+}
+ button:hover {
+    opacity: 0.7;
+}
+
+.radio{
+    margin-left: 30%;
+    margin-right:30%;
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+}
+
+.button {
+    float: left;
+    margin:  5px ;
+    padding-bottom: 15px;
+    width: 170px;
+    height: 30px;
+    
+    position: relative;
+  }
+  .button:hover{
+    opacity: 0.7;
+  }
+  
+  .button label,
+  .button input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 2px solid #2980b9;
+    color: #2980b9;
+    
+    border-radius: 4px;
+  }
+  
+  .button input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+  }
+  
+  .button input[type="radio"]:checked + label {
+    background:#2980b9;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .button label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8em;
+  }
+  
+  .one{
+    margin-bottom: 0;
+  }
+
+
+@media screen and (max-width: 900px) {
+    .modal {
+        width: 45%;
+        height: 70%;
+      }
+
+}
+
+@media screen and (max-width: 600px) {
+    .modal {
+      width: 90%;
+      height: 70%;
+      
+    }
+    .radio{
+        margin-right: 35%;
+        margin-left: 35%;
+    }
+  }
