@@ -219,7 +219,7 @@ const getSavings = () =>{
 
 //reset onclick function
 const reset = () =>{
-    window.location.href = 'https://solar-powerhouse.com'
+    window.location.href = 'index.html'
 }
 
 //3 canvas graphs below
