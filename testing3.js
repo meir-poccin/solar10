@@ -56,7 +56,7 @@ const savings = (month, year) => {
     console.log(localStorage.getItem('stat'))
     console.log(cost_kwh)
     let annual_production = (12 * monthly_bill)/ cost_kwh
-    let system_size = ((annual_production/ 1.46) /1000) 
+    let system_size = ((annual_production/ 1.46) /1000) *1.2
     const interest = .07
     const formula = interest/12 * (1 + interest/12) **
      120/((1+ interest/12) ** 120 - 1)
@@ -161,7 +161,7 @@ const chart2 = (month, kwho) =>{
     console.log(cost_kwh)
     console.log(month)
     let annual_production = (12 * monthly_bill)/ cost_kwh
-    let system_size = ((annual_production/ 1.46) /1000) 
+    let system_size = ((annual_production/ 1.46) /1000) *1.2
     const interest = .07
     const formula = interest/12 * (1 + interest/12) **
      120/((1+ interest/12) ** 120 - 1)
