@@ -56,19 +56,16 @@ const savings = (month, year) => {
     console.log(localStorage.getItem('stat'))
     console.log(cost_kwh)
     let annual_production = (12 * monthly_bill)/ cost_kwh
-    let system_size = ((annual_production/ 1.46) /1000) *1.2
+    let system_size = let system_size = ((annual_production/365)/5) * 1.15
     const interest = .07
     const formula = interest/12 * (1 + interest/12) **
      120/((1+ interest/12) ** 120 - 1)
-    let costAfterIncentive = system_size * 2000 * .6
+    let costAfterIncentive = system_size * 2850 * .6
     let monthly_finance = costAfterIncentive * formula
     let first_month_saving = monthly_bill - monthly_finance
     let first_year_saving = first_month_saving * 12
     
-    document.querySelector('.savings-month').innerText = first_month_saving.toLocaleString("en-US", {style:"currency", currency:"USD"})
-    document.querySelector('.savings-year').innerText = first_year_saving.toLocaleString("en-US", {style:"currency", currency:"USD"})
-    document.querySelector('.savings-month1').innerText = first_month_saving.toLocaleString("en-US", {style:"currency", currency:"USD"})
-    document.querySelector('.savings-year1').innerText = first_year_saving.toLocaleString("en-US", {style:"currency", currency:"USD"})
+    
     document.querySelector('.system-size').innerText = Math.round(system_size).toLocaleString()+' KW'
     document.querySelector('.system-size1').innerText = Math.round(system_size).toLocaleString()+' KW'
     document.querySelector('.addr').innerText = address
@@ -161,11 +158,11 @@ const chart2 = (month, kwho) =>{
     console.log(cost_kwh)
     console.log(month)
     let annual_production = (12 * monthly_bill)/ cost_kwh
-    let system_size = ((annual_production/ 1.46) /1000) *1.2
+    let system_size = ((annual_production/365)/5) * 1.15
     const interest = .07
     const formula = interest/12 * (1 + interest/12) **
      120/((1+ interest/12) ** 120 - 1)
-    let costAfterIncentive = system_size * 2000 * .6
+    let costAfterIncentive = system_size * 2850 * .6
     let monthly_finance = costAfterIncentive * formula
 
     for (let i =0; i<20; i++){
@@ -195,6 +192,8 @@ const chart2 = (month, kwho) =>{
              }
           } 
           myChart3.update()
+          document.querySelector('.savings-month').innerText = myChart3.data.datasets[0].data[19].toLocaleString("en-US", {style:"currency", currency:"USD"})
+          document.querySelector('.savings-month1').innerText = myChart3.data.datasets[0].data[19].toLocaleString("en-US", {style:"currency", currency:"USD"})
   }  
 
 //submit onclick function  
